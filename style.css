@@ -1,0 +1,84 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #dedede;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  margin: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  border: 5px solid blue;
+  border-radius: 35px;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* 🟪 Tablette (≥ 772px) */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure {
+    border-radius: 50%;
+  }
+
+  figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* 🟦 Grand écran (≥ 992px) */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure {
+    border-radius: 0;
+  }
+
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* 🔄 Réduction de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 🌙 Mode sombre */
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #1a1a1a;
+    color: yellow;
+    border-color: black;
+  }
+}
