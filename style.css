@@ -3,11 +3,11 @@ html {
 }
 
 body {
-  background-color: #dedede;
+  background-color: #f7f7f7;
   font-family: Arial, sans-serif;
   font-size: 1em;
+  margin: 20px;
   padding: 10px;
-  margin: 15px;
 }
 
 h1 {
@@ -16,13 +16,19 @@ h1 {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 img {
@@ -32,12 +38,11 @@ img {
 }
 
 figcaption {
-  text-align: center;
   font-weight: bold;
   margin-top: 5px;
 }
 
-/* 🟪 Tablette (≥ 772px) */
+/* 🟪 Vue tablette ≥772px */
 @media (min-width: 772px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -52,7 +57,7 @@ figcaption {
   }
 }
 
-/* 🟦 Grand écran (≥ 992px) */
+/* 🖥️ Vue grand écran ≥992px */
 @media (min-width: 992px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -67,18 +72,18 @@ figcaption {
   }
 }
 
-/* 🔄 Réduction de mouvement */
+/* 🔄 Préférence de mouvement réduit */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/* 🌙 Mode sombre */
+/* 🌒 Mode sombre */
 @media (prefers-color-scheme: dark) {
   figure {
     background-color: #1a1a1a;
-    color: yellow;
+    color: #ffff00;
     border-color: black;
   }
 }
